@@ -1,0 +1,71 @@
+openapi: 3.0.1
+info:
+  description: "Welcome to the Tumblr API! There isn't anything we enjoy more than\
+    \ seeing talented designers and engineers using Tumblr to invent whole new forms\
+    \ of creative expression. We've put a tremendous amount of care into making this\
+    \ API functional and flexible enough for any projects you throw at it. Join us\
+    \ in our discussion group to talk about how to use it, what could be better, and\
+    \ all the amazing things you're going to build with it. Follow our Engineering\
+    \ Blog for important news and announcements. Please use the API responsibly, and\
+    \ send us your feedback. Enjoy!"
+  title: Tumblr API
+  version: v2
+servers:
+- url: http://localhost:8080/v2
+tags:
+- description: Tumblr Blogs
+  name: Blogs
+paths:
+  /blog/{blog-identifier}/likes:
+    get:
+      description: This method can be used to retrieve the publicly exposed likes
+        from a blog.
+      operationId: getBlogLikes
+      parameters:
+      - description: Any blog identifier
+        in: path
+        name: blog-identifier
+        required: true
+        schema:
+          type: string
+      - description: "The number of results to return: 1–20, inclusive"
+        in: query
+        name: limit
+        schema:
+          default: 20
+          type: integer
+      - description: Liked post number to start at
+        in: query
+        name: offset
+        schema:
+          default: 0
+          type: integer
+      - description: Retrieve posts liked before the specified timestamp
+        in: query
+        name: before
+        schema:
+          type: integer
+      - description: Retrieve posts liked after the specified timestamp
+        in: query
+        name: after
+        schema:
+          type: integer
+      responses:
+        "200":
+          content: {}
+          description: OK
+        "400":
+          content: {}
+          description: Bad request
+        "404":
+          content: {}
+          description: Not found
+      summary: Retrieve Blog's Likes
+      tags:
+      - Blogs
+      x-accepts: application/json
+      x-tags:
+      - tag: Blogs
+components:
+  schemas: {}
+x-original-swagger-version: "2.0"

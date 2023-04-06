@@ -36,7 +36,7 @@ Web APIs usually include dependencies and constraints between the API parameters
 - Please add the **start time** when you start working on the task, and **End time** when you finish the task. Add the start and end time as a comment inside the method.
 
 
-- To test the code, run the Spring project. The YelpIDL project will run on port 8081, and you can use the Swagger UI to test the code by accessing the Swagger UI from the link "http://localhost:8082/swagger-ui/index.html".
+- To test the code, run the Spring project. The YelpIDL project will run on port 8082, and you can use the Swagger UI to test the code by accessing the Swagger UI from the link "http://localhost:8082/swagger-ui/index.html".
 
 
 - After you have completed your work on the project, make sure to submit your project.

@@ -46,20 +46,18 @@ The aim of this project is to implement a validation code of several parameter d
   - First, run the Spring project, the project will run on port 8082
   - Open a browser and access the Swagger UI  from the link "http://localhost:8082/swagger-ui/index.html".
   - Then Click the Get method then click “Try it out” to add parameter values.
-    
-   &nbsp;
-    ![image](src/test/resources/Documentation/SwaggerUI1.png)
-   &nbsp;
   - After adding the parameter values, click execute to execute the request.
   
    &nbsp;
-    ![image](src/test/resources/Documentation/SwaggerUI2.png)
+    ![image](src/test/resources/Documentation/SwaggerUI.png)
    &nbsp;
+
   - If the validation code is correct, the response will be 200 OK. Otherwise, the response will be 400 Bad Request with a simple error message that describes the issue.
    
    &nbsp;
-    ![image](src/test/resources/Documentation/SwaggerUI3.png)
+    ![image](src/test/resources/Documentation/Response.png)
    &nbsp;
+
 - **Step 6 (Add end time):** If you completed the task (implement the validation code that covers all dependencies), add the end time at the "**End time**" comment section.
 - **Step 7 (Submit the project):** The last step is to submit your project . . .
 

@@ -60,8 +60,7 @@ public interface BlogApi {
         tags = { "Blogs" },
         responses = {
             @ApiResponse(responseCode = "200", description = "OK"),
-            @ApiResponse(responseCode = "400", description = "Bad request"),
-            @ApiResponse(responseCode = "404", description = "Not found")
+            @ApiResponse(responseCode = "400", description = "Bad request")
         }
     )
     @RequestMapping(
@@ -75,8 +74,15 @@ public interface BlogApi {
         @Parameter(name = "before", description = "Retrieve posts liked before the specified timestamp", in = ParameterIn.QUERY) @Valid @RequestParam(value = "before", required = false) Integer before,
         @Parameter(name = "after", description = "Retrieve posts liked after the specified timestamp", in = ParameterIn.QUERY) @Valid @RequestParam(value = "after", required = false) Integer after
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        //Start Time:
+        //End Time:
+        // Add Validation code here
 
+
+
+        //
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

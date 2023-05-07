@@ -69,8 +69,7 @@ public interface BlogApi {
     )
     default ResponseEntity<Void> getBlogLikes(
         @Parameter(name = "blog-identifier", description = "Any blog identifier", required = true, in = ParameterIn.PATH) @PathVariable("blog-identifier") String blogIdentifier,
-        @Parameter(name = "limit", description = "The number of results to return: 1–20, inclusive", in = ParameterIn.QUERY) @Valid @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
-        @Parameter(name = "offset", description = "Liked post number to start at", in = ParameterIn.QUERY) @Valid @RequestParam(value = "offset", required = false, defaultValue = "0") Integer offset,
+        @Parameter(name = "offset", description = "Liked post number to start at", in = ParameterIn.QUERY) @Valid @RequestParam(value = "offset", required = false) Integer offset,
         @Parameter(name = "before", description = "Retrieve posts liked before the specified timestamp", in = ParameterIn.QUERY) @Valid @RequestParam(value = "before", required = false) Integer before,
         @Parameter(name = "after", description = "Retrieve posts liked after the specified timestamp", in = ParameterIn.QUERY) @Valid @RequestParam(value = "after", required = false) Integer after
     ) {
